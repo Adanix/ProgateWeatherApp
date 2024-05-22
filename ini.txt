@@ -1,0 +1,21 @@
+{weatherData ? (
+            <>
+               <Text style={styles.title}>The weather of {weatherData.city}</Text>
+               <Text style={styles.temperature}>{weatherData.temperature}°C</Text>
+               <View style={styles.rowContainer}>
+                  <Image source={{ uri: weatherData.weatherIcon }} style={styles.weatherIcon} />
+                  <Text style={styles.text}>{weatherData.weatherDescription}</Text>
+               </View>
+               <Text style={styles.text}>{weatherData.weatherDetail}</Text>
+               <View style={styles.rowContainer}>
+                  <Text style={styles.bold}>Visibility:</Text>
+                  <Text style={styles.text}>{weatherData.visibility}</Text>
+               </View>
+               <View style={styles.rowContainer}>
+                  <Text style={styles.bold}>Wind Speed:</Text>
+                  <Text style={styles.text}>{weatherData.windSpeed}</Text>
+               </View>
+            </>
+         ) : (
+            <Text>Loading...</Text>
+         )}
