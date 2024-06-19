@@ -1,5 +1,6 @@
-import React from 'react'
-import { TextInput, StyleSheet, View } from 'react-native'
+// src/components/customTextInput.js
+import React from 'react';
+import { TextInput, StyleSheet, View } from 'react-native';
 
 const CustomTextInput = ({
    text,
@@ -15,20 +16,22 @@ const CustomTextInput = ({
          style={styles.input}
          placeholder={placeholder}
          onChangeText={onChange}
-         defaultValue={text}
+         value={text}
       />
    </View>
-)
+);
 
 const styles = StyleSheet.create({
    input: {
-      borderWidth: 2,
-      borderColor: '#DDDDDD',
+      borderWidth: 1,
+      borderColor: '#ddd',
       padding: 10,
+      borderRadius: 5,
+      backgroundColor: '#fff',
    },
    container: {
       marginTop: 20,
    },
-})
+});
 
-export default CustomTextInput
+export default CustomTextInput;
